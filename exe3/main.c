@@ -32,14 +32,15 @@ void process_task(void *p) {
         if (xQueueReceive(xQueueData, &data, 100)) {
             // implementar filtro aqui!
 
-            v[i++] = data;
+            v[i] = data;
+            i++;
 
             if (!cinco_elementos && i == 5) {
                 cinco_elementos = 1;
             }
             if (cinco_elementos) {
                 int y = (v[0] + v[1] + v[2] + v[3] + v[4])/5;
-                printf("%d", y);
+                printf("%d\n", y);
             }
 
             i = i % 5;
