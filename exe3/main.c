@@ -38,7 +38,7 @@ void process_task(void *p) {
                 cinco_elementos = 1;
             }
             if (cinco_elementos) {
-                int y = v[0] + v[1] + v[2] + v[3] + v[4];
+                int y = (v[0] + v[1] + v[2] + v[3] + v[4])/5;
                 printf("%d", y);
             }
 
